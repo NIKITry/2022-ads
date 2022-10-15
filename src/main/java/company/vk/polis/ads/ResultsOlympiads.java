@@ -1,4 +1,4 @@
-//package company.vk.polis.ads;
+package company.vk.polis.ads;
 
 import java.util.*;
 import java.io.BufferedReader;
