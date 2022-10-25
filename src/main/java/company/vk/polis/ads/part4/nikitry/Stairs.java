@@ -26,8 +26,9 @@ public final class Stairs {
 
     private static int maxSumCostSteps(int[] stairs, int maxStep) {
         int[] costOfSteps = new int[stairs.length];
+        int from;
         for (int i = 1; i < costOfSteps.length; i++) {
-            int from = Math.max(0, i - maxStep);
+            from = Math.max(0, i - maxStep);
             costOfSteps[i] = max(costOfSteps, from, i - 1) + stairs[i];
         }
         return costOfSteps[costOfSteps.length - 1];
@@ -42,8 +43,8 @@ public final class Stairs {
             }
             stairs[i] = in.nextInt();
         }
-        int maxStep = in.nextInt();
 
+        int maxStep = in.nextInt();
         out.write(maxSumCostSteps(stairs, maxStep) + "\n");
     }
 
